@@ -32,9 +32,20 @@
 //         )
 //     }
 // 5 ||
+    // export default function Todo({task, isDone}){
+    //     return(
+    //         <li> {task} {isDone || 'Not Done'}</li>
+    //     )
+    // }
+
+// 6
     export default function Todo({task, isDone}){
-        return(
-            <li> {task} {isDone || 'Not Done'}</li>
-        )
+        let listItem;
+       if(isDone)
+        listItem =  <li>Finish: {task}</li> 
+       else 
+       listItem = <li>Work On: {task}</li>
+
+       return listItem 
     }
   
