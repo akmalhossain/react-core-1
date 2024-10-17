@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Todo from './Todo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,6 +10,18 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
+      <Todo 
+      task="learn React" 
+      isDone={true}>
+      </Todo>
+      <Todo 
+      task="Explore core concepts" 
+      isDone={false}>
+      </Todo>
+      <Todo 
+      task="Try jsx" 
+      isDone={false}>
+      </Todo>
       {/* <Device name="Laptop" price="6000"></Device>
       <Device name= "mobile" price ="8000"></Device>
       <Device name= "watch" price ="4000"></Device>
@@ -31,7 +44,7 @@ function Person() {
   // return <h3>I am {person.name} a person age: {age+ money}</h3>
   return <h3>I am {person.name} a person age: {person.age}</h3>
 }
-function Student({grade=1, score=0}) { 
+function Student({ grade = 1, score = 0 }) {
   return (
     <div className='student'>
       <h3>This is a student</h3>
@@ -42,34 +55,34 @@ function Student({grade=1, score=0}) {
   )
 }
 
-function Developer(){
-  const devStyle= {
-    margin:'20px',
+function Developer() {
+  const devStyle = {
+    margin: '20px',
     padding: '20px',
     border: '2px solid purple',
     borderRadius: '20px'
 
   }
-  return(
+  return (
     <>
-    <div style={devStyle}>
-      <h5>Developer</h5>
-      <p>Coding: </p>
-    </div>
-    <div style={{
-    margin:'20px',
-    padding: '20px',
-    border: '2px solid purple',
-    borderRadius: '20px'
+      <div style={devStyle}>
+        <h5>Developer</h5>
+        <p>Coding: </p>
+      </div>
+      <div style={{
+        margin: '20px',
+        padding: '20px',
+        border: '2px solid purple',
+        borderRadius: '20px'
 
-  }}>
-      <h5>Developer </h5>
-      <p>Coding: </p>
-    </div>
+      }}>
+        <h5>Developer </h5>
+        <p>Coding: </p>
+      </div>
     </>
   )
 }
-function Device({name, price}){
+function Device({ name, price }) {
   // const {name, price}=props;
   return <h2>Device Name: {name}/ price {price} </h2>
 }
